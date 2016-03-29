@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = "tabApp">
+<head>
+    <meta charset="UTF-8">
+    <title>tabs with Angular</title>
+    <link rel="stylesheet" href="../styles/bootstrap.css">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body ng-controller="TabCtrl">
+    
+    <h1>Angular & Bootstrap tabs example</h1>
+    
+    <ul class = "nav nav-pills">
+        <li ng-class = "{active: check(1)}"><a href="#" ng-click = "set(1)" >This</a></li>
+        <li ng-class="{active: check(2)}"><a href="#" ng-click = "set(2)">That</a></li>
+        <li ng-class = "{active: check(3)}"><a href="#" ng-click = "set(3)" >Another Thing</a></li>
+    </ul>
+    
+    <div ng-show = "tab === 1">
+        <h5>This is "This"</h5>
+    </div>
+    
+    <div ng-show="tab === 2">
+        <h5>This is "That"</h5>
+    </div>
+    
+    <div ng-show = "tab === 3">
+        <h5>This is "Another Thing"</h5>
+    </div>
+    
+    
+    <script src = "../scripts/angular.js"></script>
+    <script src = "../scripts/app.js"></script>
+</body>
+</html>
